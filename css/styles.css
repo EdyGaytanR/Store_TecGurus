@@ -1,0 +1,155 @@
+body {
+    background-color: #ebebeb;
+}
+
+.categorias ul {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    position: sticky;
+    top: 10px;
+}
+
+.categorias ul.list-group li.list-group-item {
+    cursor: pointer;
+}
+
+.categorias ul.list-group li.list-group-item:hover {
+    background: #80808026;
+}
+
+.productos a {
+    color: black;
+}
+
+.productos a:hover {
+    text-decoration: none;
+}
+
+.productos a .card {
+    transition: all .3s ease;
+}
+
+.productos a .card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    transition: all .3s ease;
+}
+
+.productos .price_off {
+    color: #00a650;
+    font-size: 14px;
+}
+
+.productos .card .card-img-top {
+    border-bottom: .5px solid #00000061;
+}
+
+.productos .card .card-text {
+    font-size: 12px;
+}
+
+footer {
+    background-color: white;
+    padding: 20px 0;
+}
+
+footer .informacion {
+    height: 100%;
+}
+
+footer .informacion img {
+    display: block;
+    margin: 10px auto;
+    height: 48px;
+}
+
+footer .informacion .titulo {
+    color: #4b4b4b;
+    font-size: 20px;
+    text-align: center;
+}
+
+footer .informacion .subtitulo {
+    font-size: 14px;
+    text-align: center;
+    color: #999;
+}
+
+footer .linea {
+    border-right: .5px solid #00000073;
+}
+
+footer .no-linea {
+    border-right: none!important;
+}
+
+
+/* ESTILOS PRODUCTO */
+
+.slider_producto,
+.slider_producto_nav {
+    background-color: white;
+}
+
+.slider_producto img {
+    height: 400px;
+    margin: 20px auto;
+}
+
+.slider_producto_nav img {
+    height: 100px;
+    margin: 0 auto;
+}
+
+.producto p {
+    margin-bottom: 0;
+}
+
+.producto .estado_cantidad {
+    color: rgba(0, 0, 0, .45);
+    font-size: 14px;
+}
+
+.producto .nombre {
+    font-size: 24px;
+    color: rgba(0, 0, 0, .8);
+}
+
+.producto .calificacion i {
+    cursor: pointer;
+    color: rgb(52, 131, 250);
+}
+
+.producto .precio {
+    color: rgba(0, 0, 0, .8);
+    font-size: 36px;
+}
+
+.producto .capacidades div p,
+.producto .ram div p {
+    border-radius: 10px;
+    border: 1px dashed black;
+    text-align: center;
+}
+
+.producto .capacidades div p.active,
+.producto .ram div p.active {
+    border-radius: 10px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.producto .capacidades div p:hover,
+.producto .ram div p:hover {
+    border-radius: 10px;
+    border: 1px solid black;
+    text-align: center;
+    cursor: pointer;
+}
+
+.producto .caracteristicas {
+    color: rgba(0, 0, 0, .45);
+    font-size: 14px;
+}
+
+.producto .clear {
+    clear: both;
+}
