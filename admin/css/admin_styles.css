@@ -1,20 +1,14 @@
 body {
-    background: url('../imgs/back_login.jpg');
-}
-
-.container {
-    height: 100vh;
-}
+  background: url("../imgs/back_login.jpg"); }
 
 .login {
-    background-color: #bbbbbbe8;
-    width: 50%;
-    padding: 20px;
-    border-radius: 15px;
-}
-
-.login img {
+  background-color: #bbbbbbe8;
+  width: 50%;
+  padding: 20px;
+  border-radius: 15px; }
+  .login img {
     width: 30%;
     margin: 0 auto;
-    display: table;
-}
+    display: table; }
+
+/*# sourceMappingURL=admin_styles.css.map */

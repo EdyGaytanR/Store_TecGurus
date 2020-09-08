@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Login Dashboard</title>
+    <title>Register</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="css/admin_styles.css">
 </head>
@@ -10,7 +10,11 @@
     <div class="h-100 container d-flex justify-content-center align-items-center">
         <div class="login">
             <img src="imgs/logo.png" alt="">
-            <form>
+            <form action="new_user.php" method="POST">
+                <div class="form-group">
+                    <label for="inpput_name">Name</label>
+                    <input name="name" type="text" class="form-control" id="inpput_name" aria-describedby="nameHelp">
+                </div>
                 <div class="form-group">
                     <label for="inpput_email">Email address</label>
                     <input name="email" type="email" class="form-control" id="inpput_email" aria-describedby="emailHelp">
@@ -21,8 +25,7 @@
                     <input name="password" type="password" class="form-control" id="inpput_password">
                 </div>
                 <div class="d-flex justify-content-between">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    <a href="register.php"><button type="button" class="btn btn-success">Register</button></a>
+                    <button type="submit" class="btn btn-success">Register</button>
                 </div>
             </form>
         </div>
