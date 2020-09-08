@@ -1,3 +1,5 @@
+<!-- Star Session for Messages -->
+<?php session_start(); ?>
 <html>
 
 <head>
@@ -9,8 +11,20 @@
 <body>
     <div class="h-100 container d-flex justify-content-center align-items-center">
         <div class="login">
+            <!-- Validate if the message var is full and is an array to display the message-->
+            <?php  if(isset($_SESSION['message']) && is_array($_SESSION['message'])): ?>
+            <div class="alert alert-<?php echo $_SESSION['message']['status']; ?> alert-dismissible fade show" role="alert">
+                <?php echo $_SESSION['message']['text']; ?>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <!-- Finish the validation -->
+            <?php endif; ?>
+            <!-- Clean the message var to dont display the message again. -->
+            <?php unset($_SESSION['message']);?>
             <img src="imgs/logo.png" alt="">
-            <form>
+            <form action='autentication.php' method='POST'>
                 <div class="form-group">
                     <label for="inpput_email">Email address</label>
                     <input name="email" type="email" class="form-control" id="inpput_email" aria-describedby="emailHelp">
