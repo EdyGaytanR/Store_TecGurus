@@ -23,27 +23,27 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#"><img src="imgs/logo.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Productos</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">All Products</a>
-                            <a class="dropdown-item" href="#">Add Products</a>
+                            <a class="dropdown-item" href="products.php">All Products</a>
+                            <a class="dropdown-item" href="create_product.php">Add Products</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categorias</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">All Categories</a>
-                            <a class="dropdown-item" href="#">Add Categories</a>
+                            <a class="dropdown-item" href="categories.php">All Categories</a>
+                            <a class="dropdown-item" href="create_category.php">Add Categories</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Usuarios</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="users.php">All Users</a>
                             <a class="dropdown-item" href="create_user.php">Add User</a>
@@ -52,7 +52,7 @@
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Log Out</a>
+                        <a class="nav-link" href="logout.php">Log Out</a>
                     </li>
                 </ul>
             </div>
@@ -62,19 +62,23 @@
                 <form action="add_product.php" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="input_name">Name</label>
-                        <input name="name" type="text" class="form-control" id="inpput_name" aria-describedby="nameHelp">
+                        <input name="name" maxlength="30" type="text" class="form-control" id="input_name" aria-describedby="nameHelp" required>
                     </div>
                     <div class="form-group">
                         <label for="input_description">Description</label>
-                        <textarea name="description" class="form-control" id="input_description" rows="3"></textarea>
+                        <textarea name="description" maxlength="50" class="form-control" id="input_description" rows="3"></textarea>
                     </div>
                     <div class="form-group">
                         <label for="input_price">Price</label> $
-                        <input name="price" type="numbre" class="form-control" id="input_price" aria-describedby="priceHelp">
+                        <input name="price" type="number" step="any" class="form-control" id="input_price" aria-describedby="priceHelp" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="input_discount">Discount</label> %
+                        <input name="discount" type="number" class="form-control" id="input_discount" aria-describedby="priceHelp">
                     </div>
                     <div class="form-group">
                         <label for="input_category">Category</label>
-                        <select name='category' class="form-control" id="input_category">
+                        <select name='category' class="form-control" id="input_category" required>
                             <option value="">Select a Category</option>
                         <?php while($column = mysqli_fetch_array($result)): ?>
                             <option value="<?php echo $column['id_category'] ?>"><?php echo $column['name'] ?></option>
@@ -83,7 +87,7 @@
                     </div>
                     <div class="form-group">
                         <label for="input_image">Image</label>
-                        <input name='image' type="file" class="form-control-file" id="input_image">
+                        <input name='image' type="file" class="form-control-file" id="input_image" required>
                     </div>
                     <div class="d-flex justify-content-between">
                         <button type="submit" class="btn btn-success">Register</button>

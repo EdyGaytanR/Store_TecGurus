@@ -20,12 +20,13 @@ if(isset($_FILES['image'])){
 $name = $_POST['name'];
 $description = $_POST['description'];
 $price = $_POST['price'];
+$discount = $_POST['discount'];
 $category = $_POST['category'];
 
 //Validate if the 3 vars are full
 if (isset($name)) {
     //Create query for INSERT vars into user table 
-    $query = "Insert into products(name,description,price,id_category,image,status) values('{$name}','{$description}','{$price}','{$category}','{$nameFile}','1')";
+    $query = "Insert into products(name,description,price,discount,id_category,image) values('{$name}','{$description}','{$price}','{$discount}','{$category}','{$nameFile}')";
     //Run Query and validate return bool
     if (mysqli_query($conection,$query)) {
         //Create a success message for the created user 

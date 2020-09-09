@@ -20,7 +20,19 @@ body {
     width: 100%; }
     #admin .content table td,
     #admin .content table th {
-      border: .5px solid black; }
+      border: .5px solid black;
+      text-align: center;
+      padding: 10px 0; }
+    #admin .content table img {
+      width: 70px;
+      margin: 0 auto;
+      display: table; }
+    #admin .content table i {
+      margin: 0 auto;
+      display: table;
+      font-size: 28px; }
+    #admin .content table i.fa-check-circle {
+      color: green; }
   #admin .content .logo {
     width: 200px;
     margin: 0 auto;

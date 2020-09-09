@@ -25,6 +25,21 @@ body {
             td,
             th {
                 border: .5px solid black;
+                text-align: center;
+                padding: 10px 0;
+            }
+            img {
+                width: 70px;
+                margin: 0 auto;
+                display: table;
+            }
+            i {
+                margin: 0 auto;
+                display: table;
+                font-size: 28px;
+            }
+            i.fa-check-circle {
+                color: green;
             }
         }
         .logo {
