@@ -12,17 +12,17 @@
             <img src="imgs/logo.png" alt="">
             <form action="new_user.php" method="POST">
                 <div class="form-group">
-                    <label for="inpput_name">Name</label>
-                    <input name="name" type="text" class="form-control" id="inpput_name" aria-describedby="nameHelp">
+                    <label for="input_name">Name</label>
+                    <input name="name" type="text" class="form-control" id="input_name" aria-describedby="nameHelp">
                 </div>
                 <div class="form-group">
-                    <label for="inpput_email">Email address</label>
-                    <input name="email" type="email" class="form-control" id="inpput_email" aria-describedby="emailHelp">
+                    <label for="input_email">Email address</label>
+                    <input name="email" type="email" class="form-control" id="input_email" aria-describedby="emailHelp">
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
                 <div class="form-group">
-                    <label for="inpput_password">Password</label>
-                    <input name="password" type="password" class="form-control" id="inpput_password">
+                    <label for="input_password">Password</label>
+                    <input name="password" type="password" class="form-control" id="input_password">
                 </div>
                 <div class="d-flex justify-content-between">
                     <button type="submit" class="btn btn-success">Register</button>

@@ -277,7 +277,7 @@
     });
     // filter items on button click
     $('.list-group-item').on('click', function() {
-        var filterValue = '.' + $(this).attr('data-filter');
+        var filterValue = $(this).attr('data-filter');
         $grid.isotope({
             filter: filterValue
         });

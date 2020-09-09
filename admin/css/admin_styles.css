@@ -11,4 +11,19 @@ body {
     margin: 0 auto;
     display: table; }
 
+#admin .content {
+  background-color: #d2d2d2c2;
+  width: 80%;
+  padding: 20px;
+  border-radius: 15px; }
+  #admin .content table {
+    width: 100%; }
+    #admin .content table td,
+    #admin .content table th {
+      border: .5px solid black; }
+  #admin .content .logo {
+    width: 200px;
+    margin: 0 auto;
+    display: table; }
+
 /*# sourceMappingURL=admin_styles.css.map */

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/admin_styles.css">
 </head>
 
-<body>
+<body id='dashboard'>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#"><img src="imgs/logo.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,23 +27,28 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Productos</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Ver</a>
-                        <a class="dropdown-item" href="#">Agregar</a>
+                        <a class="dropdown-item" href="#">All Products</a>
+                        <a class="dropdown-item" href="#">Add Products</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categorias</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Ver</a>
-                        <a class="dropdown-item" href="#">Agregar</a>
+                        <a class="dropdown-item" href="#">All Categories</a>
+                        <a class="dropdown-item" href="#">Add Categories</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Usuarios</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Ver</a>
-                        <a class="dropdown-item" href="#">Agregar</a>
+                        <a class="dropdown-item" href="users.php">All Users</a>
+                        <a class="dropdown-item" href="add_user.php">Add User</a>
                     </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Log Out</a>
                 </li>
             </ul>
         </div>
